@@ -15,6 +15,7 @@ export const BrandLogo = () => {
     <a href={dashboard?.url || '/'} className="mx-auto">
       <img
         className="logo py-3"
+        style={{ height: '45px' }}
         src={getConfig().LOGO_URL}
         alt={formatMessage(messages.logoAltText)}
       />
