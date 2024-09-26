@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Container, Col, Row } from '@openedx/paragon';
 
 import WidgetFooter from 'containers/WidgetContainers/WidgetFooter';
+import RedeemEntitlementCode from './RedeemEntitlementCode'; // Add this import
 import hooks from './hooks';
 
 export const columnConfig = {
@@ -43,6 +44,7 @@ export const DashboardLayout = ({ children, sidebar: Sidebar }) => {
         <Col {...columnConfig.sidebar} className="sidebar-column">
           {!isCollapsed && (<h2 className="course-list-title">&nbsp;</h2>)}
           <Sidebar setSidebarShowing={setSidebarShowing} />
+          <RedeemEntitlementCode /> {/* Add this line */}
         </Col>
       </Row>
       <Row>
