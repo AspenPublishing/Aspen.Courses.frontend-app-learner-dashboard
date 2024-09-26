@@ -26,6 +26,9 @@ export const ResumeButton = ({ cardId }) => {
       as="a"
       href="#"
       onClick={handleClick}
+      style={{
+        padding: '8px 35px',
+      }}
     >
       {formatMessage(messages.resume)}
     </ActionButton>
