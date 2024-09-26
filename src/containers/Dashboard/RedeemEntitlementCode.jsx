@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Button, Modal, Form, Icon, Card } from '@openedx/paragon';
-import { Close } from '@openedx/paragon/icons';
-import { getConfig } from '@edx/frontend-platform';
+import {
+  Button,
+  Modal,
+  Form,
+  Card,
+} from '@openedx/paragon';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { getAuthenticatedHttpClient } from '@edx/frontend-platform/auth';
 
@@ -44,9 +47,9 @@ const RedeemEntitlementCode = () => {
       <Card.Body>
         <h3>{intl.formatMessage({ id: 'dashboard.haveEnrollmentCode', defaultMessage: 'Have an Enrollment Code?' })}</h3>
         <p>
-          {intl.formatMessage({ 
-            id: 'dashboard.enrollmentCodeInstructions', 
-            defaultMessage: 'If you have an enrollment code, click on Redeem Enrollment Code to get started.'
+          {intl.formatMessage({
+            id: 'dashboard.enrollmentCodeInstructions',
+            defaultMessage: 'If you have an enrollment code, click on Redeem Enrollment Code to get started.',
           })}
         </p>
         <Button onClick={() => setIsModalOpen(true)} className="mb-3">
@@ -58,13 +61,13 @@ const RedeemEntitlementCode = () => {
       </Card.Body>
 
       <Modal
+        size="lg"
+        className="modal-dialog-centered"
         open={isModalOpen}
         title={
-          <h3 style={{ fontSize: '1.6rem', marginTop: '2rem' }}>
-            {intl.formatMessage({ id: 'dashboard.enterEnrollmentCode', defaultMessage: 'Enter Your Enrollment Code' })}
-          </h3>
+          intl.formatMessage({ id: 'dashboard.enterEnrollmentCode', defaultMessage: 'Enter Your Enrollment Code' })
         }
-        body={
+        body={(
           !isSuccess ? (
             <>
               {errorMessage && <div className="alert alert-danger" role="alert">{errorMessage}</div>}
@@ -100,7 +103,7 @@ const RedeemEntitlementCode = () => {
               </Button>
             </>
           )
-        }
+        )}
         onClose={handleClose}
         footerNode={null}
       />

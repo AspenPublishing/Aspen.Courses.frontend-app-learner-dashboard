@@ -5,7 +5,6 @@ import { ActionRow } from '@openedx/paragon';
 
 import { reduxHooks } from 'hooks';
 
-import UpgradeButton from './UpgradeButton';
 import SelectSessionButton from './SelectSessionButton';
 import BeginCourseButton from './BeginCourseButton';
 import ResumeButton from './ResumeButton';
@@ -14,9 +13,7 @@ import ViewCourseButton from './ViewCourseButton';
 export const CourseCardActions = ({ cardId }) => {
   const { isEntitlement, isFulfilled } = reduxHooks.useCardEntitlementData(cardId);
   const {
-    isVerified,
     hasStarted,
-    isExecEd2UCourse,
   } = reduxHooks.useCardEnrollmentData(cardId);
   const { isArchived } = reduxHooks.useCardCourseRunData(cardId);
 

@@ -29,8 +29,7 @@ export const CourseCardMenu = ({ cardId }) => {
   const emailSettings = useEmailSettings();
   const unenrollModal = useUnenrollData();
   const handleToggleDropdown = useHandleToggleDropdown(cardId);
-  const { shouldShowUnenrollItem, shouldShowDropdown } = useOptionVisibility(cardId);
-  const { isMasquerading } = reduxHooks.useMasqueradeData();
+  const { shouldShowDropdown } = useOptionVisibility(cardId);
   const { isEmailEnabled } = reduxHooks.useCardEnrollmentData(cardId);
 
   if (!shouldShowDropdown) {
