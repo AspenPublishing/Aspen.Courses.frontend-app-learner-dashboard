@@ -36,12 +36,12 @@ export const MasqueradeBar = () => {
   if (!canMasquerade) { return null; }
 
   return (
-    <div className="w-100 shadow-sm px-2">
-      <Form className="masquerade-bar w-100">
+    <div className="w-100 shadow-sm px-2 d-flex justify-content-center">
+      <Form className="masquerade-bar d-flex align-items-center">
         {isMasquerading ? (
           <>
-            <FormLabel inline className="masquerade-form-label">
-              <Icon src={PersonSearch} />
+            <FormLabel inline className="masquerade-form-label mb-0 mr-2">
+              <Icon src={PersonSearch} className="mr-2" />
               {formatMessage(messages.ViewingAs)}
             </FormLabel>
             <Chip
@@ -54,11 +54,11 @@ export const MasqueradeBar = () => {
           </>
         ) : (
           <>
-            <FormLabel inline id="masquerade-form-label" className="masquerade-form-label">
-              <Icon src={PersonSearch} />
+            <FormLabel inline id="masquerade-form-label" className="masquerade-form-label mb-0 mr-2">
+              <Icon src={PersonSearch} className="mr-2" />
               {formatMessage(messages.ViewAs)}
             </FormLabel>
-            <FormGroup isInvalid={isMasqueradingFailed} className="masquerade-form-input">
+            <FormGroup isInvalid={isMasqueradingFailed} className="masquerade-form-input mb-0 mr-2">
               <FormControl
                 value={masqueradeInput}
                 onChange={handleMasqueradeInputChange}
@@ -78,7 +78,7 @@ export const MasqueradeBar = () => {
               labels={{
                 default: formatMessage(messages.SubmitButton),
               }}
-              className="mr-3"
+              className="ml-2"
               state={isMasqueradingPending ? 'pending' : 'default'}
               type="submit"
             />
