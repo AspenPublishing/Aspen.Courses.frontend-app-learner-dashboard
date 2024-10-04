@@ -36,3 +36,18 @@
     padding: map-get($spacers, 3) map-get($spacers, 4);
   }
 }
+
+.masquerade-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+.masquerade-bar {
+  width: 100%;
+}
+
+.masquerade-form-input {
+  flex-grow: 1;
+  max-width: 400px;
+}
