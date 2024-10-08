@@ -28,7 +28,7 @@
   "dependencies": {
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
     "@edx/browserslist-config": "^1.1.0",
-    "@edx/frontend-component-header": "github:AspenPublishing/Aspen.Courses.frontend-component-header#0dfb65076fb4bb1a269ae679f937f3379e5ef2c7",
+    "@edx/frontend-component-header": "github:AspenPublishing/Aspen.Courses.frontend-component-header#6eacf15da69dec2e766e2f7bba2d55506ea1746a",
     "@edx/frontend-enterprise-hotjar": "3.0.0",
     "@edx/frontend-platform": "8.1.1",
     "@edx/openedx-atlas": "^0.6.0",
