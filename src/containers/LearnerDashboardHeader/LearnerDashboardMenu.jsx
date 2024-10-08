@@ -17,24 +17,11 @@ const getLearnerHeaderMenu = (
       content: formatMessage(messages.course),
       isActive: true,
     },
-    {
-      type: 'item',
-      href: `${urls.programsUrl()}`,
-      content: formatMessage(messages.program),
-    },
-    {
-      type: 'item',
-      href: `${urls.baseAppUrl(courseSearchUrl)}`,
-      content: formatMessage(messages.discoverNew),
-      onClick: (e) => {
-        exploreCoursesClick(e);
-      },
-    },
   ],
   secondaryMenu: [
     {
       type: 'item',
-      href: `${getConfig().SUPPORT_URL}`,
+      href: 'https://support.aspenpublishing.com/hc/en-us/categories/19204583377428-JD-Next',
       content: formatMessage(messages.help),
     },
   ],
