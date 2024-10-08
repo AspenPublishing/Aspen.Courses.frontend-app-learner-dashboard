@@ -1,14 +1,10 @@
 import { getConfig } from '@edx/frontend-platform';
 
-import urls from 'data/services/lms/urls';
-
 import messages from './messages';
 
 const getLearnerHeaderMenu = (
   formatMessage,
-  courseSearchUrl,
   authenticatedUser,
-  exploreCoursesClick,
 ) => ({
   mainMenu: [
     {
