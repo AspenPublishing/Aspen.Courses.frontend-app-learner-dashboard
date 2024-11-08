@@ -37,11 +37,11 @@ export const MasqueradeBar = () => {
 
   return (
     <div className="w-100 shadow-sm px-2 d-flex justify-content-center">
-      <div className="masquerade-container w-100 max-width-container">
-        <Form className="masquerade-bar d-flex align-items-center justify-content-center">
+      <div className="masquerade-container w-100 max-width-container container-xl">
+        <Form className="masquerade-bar d-flex align-items-center justify-content-start">
           {isMasquerading ? (
             <>
-              <FormLabel inline className="masquerade-form-label mb-0 mr-2">
+              <FormLabel inline className="masquerade-form-label mb-0">
                 <Icon src={PersonSearch} className="mr-2" />
                 {formatMessage(messages.ViewingAs)}
               </FormLabel>
@@ -74,7 +74,7 @@ export const MasqueradeBar = () => {
               </FormGroup>
               <StatefulButton
                 disabled={!masqueradeInput.length}
-                variant="brand"
+                variant="outline-primary"
                 onClick={handleMasqueradeSubmit(masqueradeInput)}
                 labels={{
                   default: formatMessage(messages.SubmitButton),
