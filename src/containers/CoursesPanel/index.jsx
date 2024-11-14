@@ -2,7 +2,9 @@ import React from 'react';
 
 import { PluginSlot } from '@openedx/frontend-plugin-framework';
 import { useIntl } from '@edx/frontend-platform/i18n';
-
+import {
+  Button,
+} from '@openedx/paragon';
 import { reduxHooks } from 'hooks';
 import {
   CourseFilterControls,
@@ -32,6 +34,7 @@ export const CoursesPanel = () => {
         <h2 className="course-list-title">{formatMessage(messages.myCourses)}</h2>
         <div className="course-filter-controls-container">
           <CourseFilterControls {...courseListData.filterOptions} />
+          <Button variant="outline-primary">ENROLLMENT CODE</Button>
         </div>
       </div>
       {hasCourses ? (
