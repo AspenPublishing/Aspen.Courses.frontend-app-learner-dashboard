@@ -21,7 +21,7 @@ export const CourseCard = ({
   return (
     <div className="mb-4.5 course-card" id={cardId} data-testid="CourseCard">
       <Card orientation={orientation}>
-        <div className="d-flex flex-column w-100">
+        <div className="d-flex flex-column w-100 p-3">
           <div {...(!isCollapsed && { className: 'd-flex' })}>
             <CourseCardImage cardId={cardId} orientation="horizontal" />
             <Card.Body>
@@ -32,12 +32,14 @@ export const CourseCard = ({
               <Card.Section className="pt-0">
                 <CourseCardDetails cardId={cardId} />
               </Card.Section>
-              <Card.Footer orientation={orientation}>
-                <CourseCardActions cardId={cardId} />
-              </Card.Footer>
+
             </Card.Body>
           </div>
-          <CourseCardBanners cardId={cardId} />
+          <Card.Footer orientation={orientation}>
+            <hr className="border-t border-f2f2f2 mx-6 lg:mx-24 container-xl mx-auto" aria-hidden="true" />
+            <CourseCardBanners cardId={cardId} />
+            <CourseCardActions cardId={cardId} />
+          </Card.Footer>
         </div>
       </Card>
     </div>
