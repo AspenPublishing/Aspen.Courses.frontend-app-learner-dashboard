@@ -29,7 +29,7 @@ export const CourseCard = ({
                 title={<CourseCardTitle cardId={cardId} />}
                 actions={<CourseCardMenu cardId={cardId} />}
               />
-              <Card.Section className="pt-0">
+              <Card.Section className="">
                 <CourseCardDetails cardId={cardId} />
               </Card.Section>
 
