@@ -2,6 +2,7 @@
 
 .course-list-column {
   padding: 0 map-get($spacers, 4);
+  min-width: 100%;
 }
 
 .sidebar-column {
