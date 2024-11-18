@@ -30,11 +30,11 @@ export const CoursesPanel = () => {
   const courseListData = useCourseListData();
   return (
     <div className="course-list-container">
-      <div className="course-list-heading-container">
+      <div className="course-list-heading-container py-4">
         <h2 className="course-list-title">{formatMessage(messages.myCourses)}</h2>
-        <div className="course-filter-controls-container">
+        <div className="course-filter-controls-container flex">
+          <Button variant="outline-primary" className="mr-2">ENROLLMENT CODE</Button>
           <CourseFilterControls {...courseListData.filterOptions} />
-          <Button variant="outline-primary">ENROLLMENT CODE</Button>
         </div>
       </div>
       {hasCourses ? (

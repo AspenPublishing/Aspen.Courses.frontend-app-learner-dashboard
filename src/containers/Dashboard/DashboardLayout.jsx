@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import { Container, Col, Row } from '@openedx/paragon';
 
-import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
 import hooks from './hooks';
 
 export const columnConfig = {
@@ -25,7 +24,6 @@ export const columnConfig = {
 
 export const DashboardLayout = ({ children }) => {
   const {
-    isCollapsed,
     sidebarShowing,
   } = hooks.useDashboardLayoutData();
 
