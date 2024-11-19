@@ -37,6 +37,22 @@ const messages = defineMessages({
     id: 'enrollment.error.unexpected',
     defaultMessage: 'An unexpected error occurred. Please try again.',
   },
+  errorTitle: {
+    id: 'enrollment.error.title',
+    defaultMessage: 'Could not redeem enrollment code',
+  },
+  errorTryAgain: {
+    id: 'enrollment.error.tryAgain',
+    defaultMessage: 'Please try again.',
+  },
+  errorContactSupport: {
+    id: 'enrollment.error.contactSupport',
+    defaultMessage: 'If you need additional assistance, contact us at',
+  },
+  errorSupportEmail: {
+    id: 'enrollment.error.supportEmail',
+    defaultMessage: 'jd.next@aspenpublishing.com',
+  },
 });
 
 export default messages;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ModalDialog, Button, Form } from '@openedx/paragon';
+import { ModalDialog, Button, Form, Icon } from '@openedx/paragon';
+import { Error } from '@openedx/paragon/icons';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { getAuthenticatedHttpClient } from '@edx/frontend-platform/auth';
 import { getConfig } from '@edx/frontend-platform';
@@ -53,6 +54,42 @@ export const EnrollmentCodeModal = ({ isOpen, onClose }) => {
     }
   };
 
+  const renderError = () => {
+    if (!errorMessage) return null;
+    
+    return (
+      <div className="alert alert-danger border-0 bg-light-danger mb-4" role="alert">
+        <div className="d-flex">
+          <div className="flex-shrink-0">
+            <Icon
+              src={Error}
+              className="text-danger-500"
+              size="sm"
+            />
+          </div>
+          <div className="flex-grow-1 ms-2 ml-2">
+            <h3 className="h4 alert-heading mb-2">
+              {intl.formatMessage(messages.errorTitle)}
+            </h3>
+            <p className="mb-2">
+              {intl.formatMessage(messages.errorTryAgain)}
+            </p>
+            <p className="mb-0">
+              {intl.formatMessage(messages.errorContactSupport)}{' '}
+              <a 
+                href={`mailto:${intl.formatMessage(messages.errorSupportEmail)}`}
+                className="text-danger"
+              >
+                {intl.formatMessage(messages.errorSupportEmail)}
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <ModalDialog
       title={!isSuccess ? intl.formatMessage(messages.title) : intl.formatMessage(messages.success)}
@@ -76,11 +113,7 @@ export const EnrollmentCodeModal = ({ isOpen, onClose }) => {
               {intl.formatMessage(messages.description)}
             </p>
             
-            {errorMessage && (
-              <div className="alert alert-danger" role="alert">
-                {errorMessage}
-              </div>
-            )}
+            {renderError()}
 
             <Form onSubmit={handleSubmit}>
               <Form.Group>
