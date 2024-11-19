@@ -33,7 +33,7 @@ export const CoursesPanel = () => {
       <div className="course-list-heading-container py-4">
         <h2 className="course-list-title">{formatMessage(messages.myCourses)}</h2>
         <div className="course-filter-controls-container flex justify-content-end">
-          <Button variant="outline-primary" className="mr-2">ENROLLMENT CODE</Button>
+          <Button variant="outline-primary" className="mr-2">Enrollment Code</Button>
           <CourseFilterControls {...courseListData.filterOptions} />
         </div>
       </div>
