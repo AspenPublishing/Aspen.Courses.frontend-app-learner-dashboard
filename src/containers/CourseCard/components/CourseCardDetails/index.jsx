@@ -49,7 +49,7 @@ export const CourseCardDetails = ({ cardId }) => {
             </svg>
             <span style={{ letterSpacing: '0.14em' }}>
               <span>{startDate < now ? 'Started ' : 'Starts '}</span>
-              <span style={{ color: '#3C3734' }}>{formatDate(startDate)}</span>
+              <span className='card-details-date'>{formatDate(startDate)}</span>
             </span>
           </span>
 
@@ -73,7 +73,7 @@ export const CourseCardDetails = ({ cardId }) => {
                 </svg>
                 <span style={{ letterSpacing: '0.14em' }}>
                   <span>{endDate < now ? 'Ended ' : 'Ends '}</span>
-                  <span style={{ color: '#3C3734' }}>{formatDate(endDate)}</span>
+                  <span className='card-details-date'>{formatDate(endDate)}</span>
                 </span>
               </span>
             </>
